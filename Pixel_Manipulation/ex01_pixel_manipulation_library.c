@@ -18,7 +18,5 @@ int main(void) {
     SDL_RenderTexture(renderer,texture,framebuffer,sizeof(framebuffer));
     SDL_RenderPresent(renderer);
 
-    printf("Hello, World!\n");
-    printf("Hello, World!\n");
     return 0;
 }

@@ -18,5 +18,6 @@ int main(void) {
     SDL_RenderTexture(renderer,texture,framebuffer,sizeof(framebuffer));
     SDL_RenderPresent(renderer);
 
+
     return 0;
 }

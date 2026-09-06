@@ -10,9 +10,9 @@ uint32_t framebuffer[320*200];
 int main(void) {
     SDL_Init(SDL_INIT_VIDEO );
 
-    SDL_Window  *window = SDL_CreateWindow("SDL Window",WIDTH,HEIGHT,0);
+    SDL_Window  *window = SDL_CreateWindow("SDL Window",WIDTH * 4,HEIGHT * 4,0);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, nullptr);
-    SDL_Texture *texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_XRGB8888, SDL_TEXTUREACCESS_TARGET, WIDTH, HEIGHT);
+    SDL_Texture *texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_XRGB8888, SDL_TEXTUREACCESS_STREAMING, WIDTH, HEIGHT);
 
     framebuffer[0] = 0x00FF00;
     framebuffer[1] = 0xFF0000;

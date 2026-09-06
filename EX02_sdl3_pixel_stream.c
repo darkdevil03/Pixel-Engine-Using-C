@@ -21,7 +21,9 @@ int main(void) {
     framebuffer[4] = 0x00FF00;
     framebuffer[5] = 0xFF0000;
 
-    while(true) {
+    uint8_t timer = 50;
+
+    while((timer--)!=0) {
 
         SDL_UpdateTexture(texture,nullptr,framebuffer,0);
 
